@@ -1,0 +1,8 @@
+
+<!-- <p> You have clicked {{counter}} times</p>
+<button (click)="clickHandler()">Click me!</button> -->
+
+<h2>{{myBook.title}}</h2>
+<h3>{{myBook.author}}</h3>
+<h4 [ngClass]="myBook.availability == 'yes'? 'greenClass' : 'redClass'" >{{myBook.availability}}</h4>
+<p *ngIf="myBook.availability == 'yes'" >Come and borrow this fantastic book!</p>
