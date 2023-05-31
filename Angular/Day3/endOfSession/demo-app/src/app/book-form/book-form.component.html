@@ -1,0 +1,35 @@
+<div id="big-div">
+    <div class="form-container" >
+    
+        <mat-form-field class="field">
+          <input matInput placeholder="ISBN" [(ngModel)]="book.isbn" required minlength="5">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput placeholder="Title" [(ngModel)]="book.title" minlength="10" >
+                <mat-hint>Title needs to be at least 10 characters</mat-hint>
+                <mat-error>Name is required</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Author" [(ngModel)]="book.author">
+          </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Description" [(ngModel)]="book.description">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Publisher" [(ngModel)]="book.publisher">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select placeholder="Category" [(ngModel)]="book.cat">
+            <mat-option *ngFor="let cat of categories" [value]="cat">{{cat.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="onSubmit()">Submit</button>
+    
+    </div>
+    </div>
+    
